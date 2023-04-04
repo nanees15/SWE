@@ -73,7 +73,8 @@
                     * report safety issue
                     * provide driver feedback
                     * get help 
-                * any button would initiate a customer support chat with options, driver/rider should report for what they want and follow the guidline.
+                * any button would initiate a customer support chat with options,
+                    driver/rider should report for what they want and follow the guidline.
             3. guide
                 * include all needed information about the application
         
