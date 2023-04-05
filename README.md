@@ -188,41 +188,43 @@
 #### 8. Log in:
 
 * Description / Action:
-    * 
+    * driver/rider shall be able to log in with his valid email and passcode
 
 * Requirements / Inputs:
-    * 
+    * driver/rider should enter his email or phone number and passcode.
+    * system must compare this data with the data in database
 
 * Source:
-    * 
+    * source is USER and DB? (validate with db?)
 
 * Pre-Condition:
-    * 
+    * driver/rider must have an account first
 
 * Post-Condition:
-    * 
+    * --
 
 * Output:
-    * 
+    * if driver/rider logg in successfully, home page will be displayed. Otherwise, message that states "email or passcode is incorrect" will be displayed
 
 ***
 
 #### 9. driver mode:
 
 * Description / Action:
-    * 
+    * driver shall be able to choose his mode
 
 * Requirements / Inputs:
-    * 
+    * driver choose between online and offline modes. In online mode, driver can receive requests. Otherwise, driver cannot receive requests
 
 * Source:
-    * 
+    * Driver
 
 * Pre-Condition:
-    * 
+    * driver can't change his mode to offline while he is in ongoing ride.
 
 * Post-Condition:
     * 
 
 * Output:
-    * 
+    * In case of online mode, searching widget will be displayed till he receives a request.
+    * In case of offline mode, nothing changes.
