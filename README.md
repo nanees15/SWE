@@ -44,7 +44,8 @@
     * Driver/rider must log in ??
     * Rider must click on Book a ride, be matched with a driver and the ride start.
     * Checking the number of cancels the driver/rider made through the day.
-    If it exceeds the maximum allowed number of cancels per day, the driver/rider should be informed that if cancellation done he/she will pay a fine.
+    If it exceeds the maximum allowed number of cancels per day,
+      the driver/rider should be informed that if cancellation done he/she will pay a fine.
 
 * Post-Condition:
     * System should increment driver/rider 's number of cancels 
@@ -72,7 +73,8 @@
                     * report safety issue
                     * provide driver feedback
                     * get help 
-                * any button would initiate a customer support chat with options, driver/rider should report for what they want and follow the guidline.
+                * any button would initiate a customer support chat with options,
+                    driver/rider should report for what they want and follow the guidline.
             3. guide
                 * include all needed information about the application
         
