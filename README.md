@@ -95,7 +95,7 @@
 
 ***
 
-#### 3. GIS:
+#### 4. GIS:
 
 * Description / Action:
     * 
@@ -117,7 +117,95 @@
 
 *** 
 
-#### 4. Rentals:
+#### 5. Rentals:
+
+* Description / Action:
+    * Rider shall be able to rent a car for himself to use it and return it back at the agreed time.
+
+* Requirements / Inputs:
+    * In order to start, rider should click on "rent a car" button, choose the type of car he/she wants from the available ones, specify the time of picking up and dropping off and pay a diposit.
+
+* Source:
+    * Source is the Rider(user) & database
+
+* Pre-Condition:
+    * Rider should have enough money in his wallet/visa in order to make this functionality start.
+    * Rider can use this functionality once his rating stars are greater than 3.
+
+* Post-Condition:
+    * system should track the car & make sure the rider returned the car at the agreed time.
+    * if the rider is late, rider will be charged a fine that increases every hour that passes. 
+
+* Output:
+    * car's location should be displayed & timer begins once the rider takes the car.
+
+***
+
+#### 6. Free drive:
+
+* Description / Action:
+    * Rider shall be able to book a ride with no specific destination.
+
+* Requirements / Inputs:
+    * rider should click on "Free drive" button, specify the pick up location
+
+* Source:
+    * Source is rider.
+
+* Pre-Condition:
+    * Rider can use this functionality once his rating stars are greater than 3.
+
+* Post-Condition:
+    * 
+
+* Output:
+    * Ride starts
+
+#### 7. evaluate driver's application:
+
+* Description / Action:
+    * Hr shall be able to review driver's application, evaluate it and take the appropriate decision.
+
+* Requirements / Inputs:
+    * hr should be notified that there is a new application, review it and check that that person is qualified to be a driver.
+
+* Source:
+    * HR & DB ??
+
+* Pre-Condition:
+    * 
+
+* Post-Condition:
+    * 
+
+* Output:
+    * an email is sent to the desired person states if he is accepted or not, depend on Hr's evaluation.
+
+***
+
+#### 8. Log in:
+
+* Description / Action:
+    * 
+
+* Requirements / Inputs:
+    * 
+
+* Source:
+    * 
+
+* Pre-Condition:
+    * 
+
+* Post-Condition:
+    * 
+
+* Output:
+    * 
+
+***
+
+#### 9. driver mode:
 
 * Description / Action:
     * 
