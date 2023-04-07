@@ -275,8 +275,8 @@
     * inputs : mail , username, phone number , password and car info .
     * source : through a form filled by the user.
     * pre-condition : the user data should be valid like the car license .
-    * post-condition : the user will be registred as a driver and all the driver features will be enabled to him .
-    * output : an account will be generated to the driver and added to our database and platform . 
+    * post-condition : the user application will be added to the system with status "pending" untill evaluation ends . 
+    * output : the user will receive a message to endicate a sucessfull application .
 
 ---
 
@@ -296,7 +296,7 @@
     * inputs : new drop-off location , other payment method , choose multiple locations for stops.
     * source : through a form from the customer  .
     * pre-condition : the given inputs should be valid .
-    * post-condition: al 7agat ale specified fo2 de htt8yr 
+    * post-condition: the trip will get altered .
     * output : the trip will get altered to the user likes .
 
 ---
@@ -329,8 +329,8 @@
      * inputs :  price , pick-up , drop-off points , driver name .
      * source: database
      * pre-condition : the trip must be completed successfully .
-     * post-condition: the user will be able to see all previous trips in detail .
-     * output : nothing 
+     * post-condition: nothing
+     * output : the user will be able to see all previous trips in detail . 
 
 ---
 
