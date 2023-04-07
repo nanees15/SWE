@@ -33,7 +33,8 @@
     * Driver shall be able to confirm or reject a ride after receiving a request
 
 * Requirements / Inputs:
-    * driver have to open the application and wait for a request.
+    * driver have to open the application and wait for a request. // driver mode
+    * select confirm button or reject button
 
 * Source:
     * Source is Driver.
