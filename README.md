@@ -53,14 +53,15 @@
 ### 2. Cancel ride:
 
 * Description / Action:
-    * The driver & rider shall be able to cancel the ride at any time.
+    * The driver, rider and customer support shall be able to cancel the ride at any time.
 
 * Requirements / Inputs:
     * Rider/Driver should click on "cancel ride" button // input
     * specify the reason why he/she want to cancel the ride from checkbox and if he/she chose "other", then he/she can write in text field.
+    * support can cancle ride if app is not responding.
 
 * Source:
-    * The Source can be DRIVER or USER
+    * The Source can be DRIVER/rider/customer support
 
 * Pre-Condition:
     * Rider must click on Book a ride, be matched with a driver and the ride start.
@@ -119,10 +120,11 @@
 ### 4. GIS:
 
 * Description / Action:
-    * driver/rider shall be able to open the maps integrated in the application and track the car and route.
+    * driver/rider/customer support shall be able to open the maps integrated in the application and track the car and route.
 
 * Requirements / Inputs:
     * rider/driver can view map, search for a location and select places to review.
+    * support can view map and track rides.
 
 * Source:
     * db & user
