@@ -1,8 +1,33 @@
 # SWE
+## A. User Requirements:
 
-### Functional Requirements
+ * The System helps the user to book a ride to anywhere & at any time.
 
-#### 1. Confirm / reject request:
+ * I can contact the driver or customer service for complaints
+
+ * I can also control his trip.
+
+ * I can choose the best payment method for him.
+
+ * A user shall be able to view the history of his rides.
+
+ * A user shall be able to rent a car.
+
+ * The user feels free to give a rating about driver or the trip.
+
+ * A user shall be able to login (register).
+
+ <!-- *  Accepting & decline trip make sure The driver is online  ? -->
+
+ * As a user i can change my destination during the trip.
+ 
+ * The system provide support help for any problems.
+
+***
+
+## B. Functional Requirements
+
+### 1. Confirm / reject request:
 
 * Description / Action:
     * Driver shall be able to confirm or reject a ride after receiving a request
@@ -23,9 +48,9 @@
     * If driver confirmed the request, the ride should start, pickup location should appear and driver should head to it.
     Otherwise, the system should match driver with another ride.
 
-***
+---
 
-#### 2. Cancel ride:
+### 2. Cancel ride:
 
 * Description / Action:
     * The driver & rider shall be able to cancel the ride at any time.
@@ -49,9 +74,9 @@
 * Output:
     * The one who cancelled will be able to specify the reason he/she cancelled, and then return to the main widget.   ?????
 
-***
+---
 
-#### 3. Report / Help:
+### 3. Report / Help:
 
 * Description / Action:
     * Driver/Rider shall be able to report for a situation or for lost/found personal belongings
@@ -89,31 +114,32 @@
     * if report is under evaluation, a message will be displayed(Thank you for reporting, we will get back to you soon!).
     * if issue is solved nothing will appear.
 
-***
+---
 
-#### 4. GIS:
+### 4. GIS:
 
 * Description / Action:
     * driver/rider shall be able to open the maps integrated in the application and track the car and route.
 
 * Requirements / Inputs:
-    * 
+    * rider/driver can view map, search for a location and select places to review.
 
 * Source:
-    * db?
+    * db & user
 
 * Pre-Condition:
-    * 
+    * rider must have started the process of booking a ride
+    * rider/driver can view maps while in trip.
 
 * Post-Condition:
-    * 
+    * --
 
 * Output:
     * map is displayed
 
-*** 
+---
 
-#### 5. Rentals:
+### 5. Rentals:
 
 * Description / Action:
     * Rider shall be able to rent a car for himself to use it and return it back at the agreed time.
@@ -135,9 +161,9 @@
 * Output:
     * car's location should be displayed & timer begins once the rider takes the car.
 
-***
+---
 
-#### 6. Free drive:
+### 6. Free drive:
 
 // fe hagat hna 
 * Description / Action:
@@ -158,7 +184,9 @@
 * Output:
     * Ride starts
 
-#### 7. evaluate driver's application:
+---
+
+### 7. evaluate driver's application:
 
 * Description / Action:
     * Hr shall be able to review driver's application, evaluate it and take the appropriate decision.
@@ -179,9 +207,9 @@
 * Output:
     * an email is sent to the desired person states if he is accepted or not, depend on Hr's evaluation.
 
-***
+---
 
-#### 8. Log in:
+### 8. Log in:
 
 * Description / Action:
     * driver/rider shall be able to log in with his valid email and passcode
@@ -197,14 +225,14 @@
     * driver/rider must have an account first
 
 * Post-Condition:
-    * --
+    * app can be used.
 
 * Output:
     * if driver/rider logg in successfully, home page will be displayed. Otherwise, message that states "email or passcode is incorrect" will be displayed
 
-***
+---
 
-#### 9. driver mode:
+### 9. driver mode:
 
 * Description / Action:
     * driver shall be able to choose his mode
@@ -219,8 +247,98 @@
     * driver can't change his mode to offline while he is in ongoing ride.
 
 * Post-Condition:
-    * 
+    * In online mode, receiving requests will be enabled.
 
 * Output:
     * In case of online mode, searching widget will be displayed till he receives a request.
     * In case of offline mode, nothing changes.
+
+***
+
+* register :
+   
+    * action : create an account for the user 
+    * inputs : mail , password , phone number and username .
+    * source :  by the user .
+    * pre-condition : check the validation of the user data like checking the format of mail and phone number , the user provided a strong password . 
+    * post-condition : the user data will successfully be added to our database , platform and creadted an account and ready to use the platform .
+    * output : a user account will generated for the user and will be added to the database .
+
+---
+
+ * apply :
+    
+    * action : enable the user to use the app as a driver .
+    * inputs : mail , username, phone number , password and car info .
+    * source : through a form filled by the user.
+    * pre-condition : the user data should be valid like the car license .
+    * post-condition : the user will be registred as a driver and all the driver features will be enabled to him .
+    * output : an account will be generated to the driver and added to our database and platform . 
+
+---
+
+* book :
+   - 
+    * action : enable the customer to book a trip defining a pick-up and drop-off points .
+    * inputs : pick-up and drop-off points from the map , the user desired payment method .
+    * source : form filled by the user .
+    * pre-condition: all the parts of this form should be filled and the match process ends sucessfully .
+    * post-condition: the app will look for the nearest cars around the customer area . 
+    * output : the trip will start once there is a match .
+
+---
+* control trip :
+   -
+    * action : enabling the user to access and change in his trip like changing the destination , add multiple stops and change payment method.
+    * inputs : new drop-off location , other payment method , choose multiple locations for stops.
+    * source : through a form from the customer  .
+    * pre-condition : the given inputs should be valid .
+    * post-condition: al 7agat ale specified fo2 de htt8yr 
+    * output : the trip will get altered to the user likes .
+
+---
+
+* payment :
+   
+     * action : enabling multiple methods for payment like cash , wallets , credit cards , payment services for the use to choose . 
+     * inputs :  choosing from these methods and extra info for credit card info .
+     * source: user 
+     * pre-condition : the user must choose a payment method and for for credit card the card info should be valid .
+     * post-condition : The new payment method is successfully added to the user's account and is available for use when making a ride booking. 
+     * output : The user can now select the newly added payment method as their preferred option when booking a ride. The payment will be processed using the account information provided during the setup process.
+
+---
+
+* contact :
+     
+     * action : enable the user to communicate with the dirver after the match through chat or calls . 
+     * inputs :  phone number of both from the database , messages from both .
+     * source: user , database
+     * pre-condition : the match must happen first , good internet connection .
+     * post-condition: both sides can communicate with eachother .
+     * output : nothing .
+
+---
+
+* history :
+     
+     * action : show the history of rides in detail for the user .
+     * inputs :  price , pick-up , drop-off points , driver name .
+     * source: database
+     * pre-condition : the trip must be completed successfully .
+     * post-condition: the user will be able to see all previous trips in detail .
+     * output : nothing 
+
+---
+
+* rating :
+     * action : enable the user to give his feedback and rate the driver / cutomer .
+     * inputs : numerical rating or score, choosing from a scale of 1 to 5 . 
+     * source: user 
+     * pre-condition : the trip must end first 
+     * post-condition: the new rate of the user will be calculated .
+     * output : update the rating of the user .
+
+***
+
+## C. Non-functional Requirements:
