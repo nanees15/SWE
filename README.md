@@ -3,11 +3,11 @@
 
  * The System helps the user to book a ride to anywhere & at any time.
 
- * I can contact the driver or customer service for complaints
+ * User can contact the driver or customer service for complaints
 
- * I can also control his trip.
+ * User can also control his trip.
 
- * I can choose the best payment method for him.
+ * User can choose the best payment method for him.
 
  * A user shall be able to view the history of his rides.
 
@@ -20,7 +20,7 @@
  <!-- *  Accepting & decline trip make sure The driver is online  ? -->
 
  * As a user i can change my destination during the trip.
- 
+
  * The system provide support help for any problems.
 
 ***
