@@ -14,9 +14,7 @@
     * Source is Driver.
 
 * Pre-Condition:
-    * Driver must apply to be a driver.
-    * Driver must log in ??
-    * Driver must state that he is available / can get requests
+    * Driver must have chosen online mode
 
 * Post-Condition:
     * if driver confirmed request, system should increment driver's number of rides
@@ -33,19 +31,17 @@
     * The driver & rider shall be able to cancel the ride at any time.
 
 * Requirements / Inputs:
-    * Rider/Driver should click on "cancel ride" button
+    * Rider/Driver should click on "cancel ride" button // input
     * specify the reason why he/she want to cancel the ride from checkbox and if he/she chose "other", then he/she can write in text field.
 
 * Source:
     * The Source can be DRIVER or USER
 
 * Pre-Condition:
-    * Rider must register an account. / Driver must apply to be a driver.
-    * Driver/rider must log in ??
     * Rider must click on Book a ride, be matched with a driver and the ride start.
     * Checking the number of cancels the driver/rider made through the day.
     If it exceeds the maximum allowed number of cancels per day,
-      the driver/rider should be informed that if cancellation done he/she will pay a fine.
+      the driver/rider should be informed that if he/she cancels the drive, he/she will pay a fine.
 
 * Post-Condition:
     * System should increment driver/rider 's number of cancels 
@@ -84,12 +80,10 @@
     * Source can be DRIVER, RIDER or SUPPORT
 
 * Pre-Condition:
-    * Rider must register an account. / Driver must apply to be a driver.
-    * Driver/rider must log in ??
-    * Open account-page and click on help/report button.
+    <!-- * Open account-page and click on help/report button. -->
 
 * Post-Condition:
-    * system should notify that there is a new report
+    * system should notify customer support that there is a new report
 
 * Output:
     * if report is under evaluation, a message will be displayed(Thank you for reporting, we will get back to you soon!).
@@ -100,13 +94,13 @@
 #### 4. GIS:
 
 * Description / Action:
-    * 
+    * driver/rider shall be able to open the maps integrated in the application and track the car and route.
 
 * Requirements / Inputs:
     * 
 
 * Source:
-    * 
+    * db?
 
 * Pre-Condition:
     * 
@@ -115,7 +109,7 @@
     * 
 
 * Output:
-    * 
+    * map is displayed
 
 *** 
 
@@ -145,11 +139,12 @@
 
 #### 6. Free drive:
 
+// fe hagat hna 
 * Description / Action:
-    * Rider shall be able to book a ride with no specific destination.
+    * Rider shall be able to book a ride with no specific destination. / Driver shall be able to choose this mode too.
 
 * Requirements / Inputs:
-    * rider should click on "Free drive" button, specify the pick up location
+    <!-- * rider/driver should click on "Free drive" button, rider should contact the available driver and specify the pick up location -->
 
 * Source:
     * Source is rider.
@@ -178,7 +173,8 @@
     * 
 
 * Post-Condition:
-    * 
+    * evaluated application is closed.
+    * if driver is accepted, he should be able to use the application as a driver & his data should be added to database.
 
 * Output:
     * an email is sent to the desired person states if he is accepted or not, depend on Hr's evaluation.
