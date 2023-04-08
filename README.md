@@ -27,7 +27,7 @@
 
 ## B. Functional Requirements
 
-### 1. Confirm / reject request:
+### 1. manage request:
 
 * Description / Action:
     * Driver shall be able to confirm or reject a ride after receiving a request
@@ -76,7 +76,7 @@
     * message that confirms the cancellation
 ---
 
-### 3. Report / Help:
+### 3. Help:
 
 * Description / Action:
     * Driver/Rider shall be able to report for a situation or for lost/found personal belongings.
@@ -109,7 +109,7 @@
     * Source can be driver/rider and system
 
 * Pre-Condition:
-    
+    *
 
 * Post-Condition:
     * system should notify customer support that there is a new report
@@ -118,7 +118,7 @@
     * a message states that report state is pending till support contacts the reporter.
 
 ---
-### 4. matching:
+### 4. match :
     
     * Description / Action:
         * rider is matched with a driver that is within the area.
@@ -134,7 +134,7 @@
         * driver must have chosen online mode.
 
     * Post-Condition:
-        * --
+        * 
 
     * Output:
         * rider and driver will be matched and each one will view other's information
@@ -144,7 +144,7 @@
 ### 4. generate path:
     
     * Description / Action:
-        * this functionality generates path
+        * this functionality generates path according to pick-up location and drop-off location of the ride.
 
     * Requirements / Inputs:
         * pick-up location, drop-off location
@@ -153,13 +153,13 @@
         * system
 
     * Pre-Condition:
-        * 
+        * rider must have booked a ride.
 
     * Post-Condition:
-        * 
+        *
 
     * Output:
-        * path is generated and is viewed by rider and driver
+        * path is generated and is displayed for rider and driver
 
 ---
 
@@ -192,13 +192,13 @@
 
 --- -->
 
-### 5. Rentals:
+### 5. rent car:
 
 * Description / Action:
     * Rider shall be able to rent a car for himself to use it and return it back at the agreed time.
 
 * Requirements / Inputs:
-    * renting duration
+    * renting duration, rider information and driving license
 
 * Source:
     * rider
@@ -206,18 +206,40 @@
 * Pre-Condition:
     * Rider should have enough money in his wallet/visa in order to make this functionality start.
     * Rider can use this functionality once his rating stars are greater than 3.
-    * rider should have submitted needed papers in order to be able to use this functionality
 
 * Post-Condition:
     * system should track the car & make sure the rider returned the car at the agreed time.
     * if the rider is late, rider will be charged a fine that increases every hour that passes. 
 
 * Output:
-    * car's location should be displayed & timer begins once the rider takes the car.
+    * confirmation message 
 
 ---
 
-### 7. evaluate driver's application:
+
+### 7. track live location:
+
+* Description / Action:
+    * 
+
+* Requirements / Inputs:
+    *
+
+* Source:
+    * 
+
+* Pre-Condition:
+    * 
+
+* Post-Condition:
+    * 
+
+* Output:
+    * 
+
+---
+
+### 7. evaluate job application:
 
 * Description / Action:
     * Hr shall be able to review applicant's application, evaluate it and take the appropriate decision.
@@ -229,12 +251,12 @@
     * system
 
 * Pre-Condition:
-    * there must be applications
+    * there must be at leaset one application
 
 * Post-Condition:
     * if driver is accepted, he should be able to use the application as a driver & his data should be added to database.
     * if there is missing data in the application, email is sent to the applicant
-    * status is changed from pending into finished
+    * status of application is changed from pending into finished
 
 * Output:
     * an email is sent to the desired person states if he is accepted or not, depend on Hr's evaluation.
@@ -244,10 +266,10 @@
 ### 8. Log in:
 
 * Description / Action:
-    * driver/rider shall be able to log in with his valid email and passcode
+    * rider/driver/support shall be able to log in with his valid email and passcode
 
 * Requirements / Inputs:
-    * driver/rider 's phone number or email, password
+    * driver/rider/support 's phone number or email, password
 
 * Source:
     * driver/rider
@@ -256,30 +278,30 @@
     * driver/rider must have an account first
 
 * Post-Condition:
-    *
+    * rider/driver/support 's data should be retrieved from database.
 
 * Output:
-    * if data is valid, driver/rider will be logged in successfully. Otherwise, message states that there is something that is incorrect
+    * if data is valid, driver/rider will be logged in successfully. Otherwise, message states that there is something that is incorrect.
 
 ---
 
-### 9. driver mode:
+### 9. change mode:
 
 * Description / Action:
     * driver shall be able to choose between online and offline modes. In online mode, driver can receive requests. Otherwise, driver cannot receive requests
 
 * Requirements / Inputs:
-    * state of driver
+    * state of driver, driver info
 
 * Source:
-    * database
+    * driver, system
 
 * Pre-Condition:
     * driver can't change his mode to offline while he is in ongoing ride.
 
 * Post-Condition:
     * In online mode, receiving requests will be enabled.
-    * In offline mode, nothing.
+    * In offline mode, receiving requests will be disabled.
 
 * Output:
     * message states that mode is switched
@@ -297,7 +319,7 @@
 
 ---
 
- * apply :
+ * fill job application :
     regarding age,
     
     * action : enable the user to use the app as a driver .
@@ -312,7 +334,9 @@
 
 * book a ride :
   
-    * action : enable the customer to book a trip defining a source and destination points considering adding multiple stops .
+    * action : 
+        * enable the customer to book a trip defining a source and destination points considering adding multiple stops.
+        * calculate cost and estimated time.
     * inputs : pick-up and drop-off points from the map .
     * source : form filled by the user .
     * pre-condition: the user must have an account and logged in succesfully .
@@ -320,9 +344,9 @@
     * output : the trip will start once there is a match and path is shown on the map .
 
 ---
-* manage ride :
+* edit trip :
    
-    * action : enabling the user to access and change in his trip like changing the destination , add multiple stops , show estimated time and path and change payment method in the current trip.
+    * action : enabling the user to access and change in his trip like changing the destination , add multiple stops and path and change payment method in the current trip.
     * inputs : new drop-off location , other payment method , choose multiple locations for stops.
     * source : by the user  .
     * pre-condition : the trip must start first .
@@ -353,7 +377,7 @@
 
 ---
 
-* history :
+* access history :
      
      * action : show the history of rides in detail for the user .
      * inputs :  price , pick-up , drop-off points , driver name .
@@ -364,7 +388,7 @@
 
 ---
 
-* rating :
+* rate :
      * action : enable the user to give his feedback and rate the driver / cutomer .
      * inputs : numerical rating or score, choosing from a scale of 1 to 5 . 
      * source: user 
@@ -379,7 +403,8 @@
      * pre-condition : both the user viewing and the user being viewed must have an account on the platform . 
      * post-condition:  more data will get fetched from the user table in the database .
      * output : the user profile will be showed to the viewer .
- * select multi destination :
+
+ * select multiple destination :
      * action : enable the user to add multiple stops in his trip .
      * inputs : multiple locations from the map. 
      * source: user .
