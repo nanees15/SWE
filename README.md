@@ -291,56 +291,52 @@
     * action : create an account for the user 
     * inputs : mail , password , phone number and username .
     * source :  by the rider .
-    * pre-condition : type must be rider . 
+    * pre-condition : the user must be a rider . 
     * post-condition : the user data will successfully be added to our database .
-    * output : rider features will enabled to the user .
+    * output : rider features will be enabled to the user .
 
 ---
 
  * apply :
+    regarding age,
     
     * action : enable the user to use the app as a driver .
-    * inputs : mail , username, phone number , password and car info .
+    * inputs : mail , username, phone number , age , password and more info about the cat and its owner like driver’s license status, driving experience ,driving history ,criminal record, provide proof of residency, along with proof of auto insurance , car registration and car insurance coverage.
     * source : through a form filled by the driver.
-    * pre-condition : the driver data should be valid like the car license .
+    * pre-condition : the driver data should be valid like the car license . ??
+    * new pre : nothing 
     * post-condition : the driver application will be added to the system with status "pending" untill evaluation ends . 
     * output : the driver will receive a message to endicate a sucessfull application , awaiting screen will appear until the status changes to "accepted".
 
 ---
 
 * book a ride :
-    * specify the max time for the multi stops feature 
-    // estimated time
-   - 
-    * action : enable the customer to book a trip defining a source and dest points considering adding multi stops  .
+  
+    * action : enable the customer to book a trip defining a source and destination points considering adding multiple stops .
     * inputs : pick-up and drop-off points from the map .
     * source : form filled by the user .
-    * pre-condition: all the parts of this form should be filled and the match process ends sucessfully .
+    * pre-condition: the user must have an account and logged in succesfully .
     * post-condition: the app will look for the nearest cars around the customer area . 
-    * output : the trip will start once there is a match .
+    * output : the trip will start once there is a match and path is shown on the map .
 
 ---
 * control trip :
-   -
-    * action : enabling the user to access and change in his trip like changing the destination , add multiple stops and change payment method.
+   
+    * action : enabling the user to access and change in his trip like changing the destination , add multiple stops and change payment method in the current trip.
     * inputs : new drop-off location , other payment method , choose multiple locations for stops.
-    * source : through a form from the customer  .
-    * pre-condition : the given inputs should be valid .
-    * post-condition: the trip will get altered .
+    * source : by the user  .
+    * pre-condition : the trip must start first .
+    * post-condition: the trip will get altered (the trip attributes/ specification will get altered to the user likes ).
     * output : the trip will get altered to the user likes .
 
 ---
 
 * payment :
-     * to be added 
-      consider the driver/rider => add / remove card  
-      and support => access the payment method during the trip 
-      // cost ( 3n tre2 el locations as an input)
-      
-     * action : enabling multiple methods for payment like cash , wallets , credit cards , payment services for the use to choose . 
+    
+     * action : enabling multiple methods for payment like cash , wallets , credit cards , payment services for the user to choose for an example the driver/rider should add/ remove card , the support should access the payment method during the trip in case of emergency situations . 
      * inputs :  choosing from these methods and extra info for credit card info .
-     * source: user 
-     * pre-condition : the user must choose a payment method and for for credit card the card info should be valid .
+     * source : user 
+     * pre-condition :the user must have an account and logged in succesfully .
      * post-condition : The new payment method is successfully added to the user's account and is available for use when making a ride booking. 
      * output : The user can now select the newly added payment method as their preferred option when booking a ride. The payment will be processed using the account information provided during the setup process.
 
@@ -352,8 +348,8 @@
      * inputs :  phone number of both from the database , messages from both .
      * source: user , database
      * pre-condition : the match must happen first , good internet connection .
-     * post-condition: both sides can communicate with eachother .
-     * output : nothing .
+     * post-condition: A chat starts between both sides and have the access to eachother phone  number .
+     * output : a chat is opened if they choose to communicate through chat .
 
 ---
 
