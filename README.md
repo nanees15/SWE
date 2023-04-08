@@ -217,22 +217,22 @@ q.	The user feels free to give a rating about driver or the trip.
 ### 7. track live location:
 
 * Description / Action:
-    * 
+    * monitor the current whereabouts of the car during the trip .
 
 * Requirements / Inputs:
-    *
+    * the location of car .
 
 * Source:
-    * 
+    * map 
 
 * Pre-Condition:
-    * 
+    * the trip must start first .
 
 * Post-Condition:
-    * 
+    * the postion of the car will be shown/drawn on the map .
 
 * Output:
-    * 
+    * the car with the route to destination will be shown on the map and could be shared to other platforms .
 
 ---
 
