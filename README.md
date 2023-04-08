@@ -1,27 +1,24 @@
 # SWE
 ## A. User Requirements:
 
- * The System helps the user to book a ride to anywhere & at any time.
+ a.	The System helps the user to book a ride to anywhere & at any time.
+b.	A user (driver) shall be able to confirm / reject request while being on online mode.
+c.	He (driver / rider) can cancel the trip by specifying the reason. 
+d.	User (driver / rider) can report about an issue or lost item during the trip.
+e.	#GIS.
+f.	A user (rider) shall be able to rent a car with his driving liscence.
+g.	Hr can review the drivers applications to accept or decline them.
+h.	He (driver / rider) shall be able to login to the application to start booking a ride.
+i.	User (driver) can choose the driver mode that he desire.
+j.	A user (rider / driver) shall be to register into the application.
+k.	 He can apply for the application to be a driver.
+l.	The System helps the user (rider) to book a ride to anywhere & at any time.
+m.	I (rider) can control my trip.
+n.	The system provides different payment method in the application.
+o.	User ( rider) also can contact with driver or the support.
+p.	A user (rider / driver) shall be to view the history of rides. 
+q.	The user feels free to give a rating about driver or the trip.
 
- * User can contact the driver or customer service for complaints
-
- * User can also control his trip.
-
- * User can choose the best payment method for him.
-
- * A user shall be able to view the history of his rides.
-
- * A user shall be able to rent a car.
-
- * The user feels free to give a rating about driver or the trip.
-
- * A user shall be able to login (register).
-
- <!-- *  Accepting & decline trip make sure The driver is online  ? -->
-
- * As a user i can change my destination during the trip.
-
- * The system provide support help for any problems.
 
 ***
 
