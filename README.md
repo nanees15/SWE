@@ -320,9 +320,9 @@
     * output : the trip will start once there is a match and path is shown on the map .
 
 ---
-* control trip :
+* manage ride :
    
-    * action : enabling the user to access and change in his trip like changing the destination , add multiple stops and change payment method in the current trip.
+    * action : enabling the user to access and change in his trip like changing the destination , add multiple stops , show estimated time and path and change payment method in the current trip.
     * inputs : new drop-off location , other payment method , choose multiple locations for stops.
     * source : by the user  .
     * pre-condition : the trip must start first .
@@ -331,7 +331,7 @@
 
 ---
 
-* payment :
+* manage wallet :
     
      * action : enabling multiple methods for payment like cash , wallets , credit cards , payment services for the user to choose for an example the driver/rider should add/ remove card , the support should access the payment method during the trip in case of emergency situations . 
      * inputs :  choosing from these methods and extra info for credit card info .
@@ -371,7 +371,21 @@
      * pre-condition : the trip must end first 
      * post-condition: the new rate of the user will be calculated .
      * output : update the rating of the user .
-
+---
+* show profile info :
+     * action : enable the user to show the profile info of others  .
+     * inputs : id or name of the user . 
+     * source: database .
+     * pre-condition : both the user viewing and the user being viewed must have an account on the platform . 
+     * post-condition:  more data will get fetched from the user table in the database .
+     * output : the user profile will be showed to the viewer .
+ * select multi destination :
+     * action : enable the user to add multiple stops in his trip .
+     * inputs : multiple locations from the map. 
+     * source: user .
+     * pre-condition : the user must have an account and logged in succesfully and in the process of booking a trip . 
+     * post-condition:  the trip specifications will get updated and the driver will get notified with the changes.
+     * output : multiple stops will be shown in the trip map .
 ***
 
 ## C. Non-functional Requirements:
