@@ -29,6 +29,7 @@
 
 ### 1. Confirm / reject request:
 
+// requirements/ input => no ui(info) // source => system 
 * Description / Action:
     * Driver shall be able to confirm or reject a ride after receiving a request
 
@@ -40,14 +41,17 @@
     * Source is Driver.
 
 * Pre-Condition:
-    * Driver must have chosen online mode
+    * Driver must have chosen online mode (can receive requests)
+    //driver must be in match area
 
 * Post-Condition:
     * if driver confirmed request, system should increment driver's number of rides
+    //if reject forward request to another driver.
 
 * Output:
     * If driver confirmed the request, the ride should start, pickup location should appear and driver should head to it.
-    Otherwise, the system should match driver with another ride.
+    Otherwise, the system should match driver with another ride. //show other requests
+    // rider info, cost, est
 
 ---
 
@@ -74,8 +78,8 @@
     * System should increment driver/rider 's number of cancels 
 
 * Output:
-    * The one who cancelled will be able to specify the reason he/she cancelled, and then return to the main widget.   ?????
-
+    * |The one who cancelled will be able to specify the reason he/she cancelled|, and then return to the main widget.   ?????
+// msg/ fine
 ---
 
 ### 3. Report / Help:
@@ -131,8 +135,8 @@
     * db & user
 
 * Pre-Condition:
-    * rider must have started the process of booking a ride
-    * rider/driver can view maps while in trip.
+    <!-- * rider must have started the process of booking a ride -->
+    <!-- * rider/driver can view maps while in trip. -->
 
 * Post-Condition:
     * --
@@ -156,6 +160,7 @@
 * Pre-Condition:
     * Rider should have enough money in his wallet/visa in order to make this functionality start.
     * Rider can use this functionality once his rating stars are greater than 3.
+    * lazm y2dm wr2 valid 3shan y2dr y3ml da
 
 * Post-Condition:
     * system should track the car & make sure the rider returned the car at the agreed time.
@@ -166,14 +171,14 @@
 
 ---
 
-### 6. Free drive:
+<!-- ### 6. Free drive:
 
 // fe hagat hna 
 * Description / Action:
-    * Rider shall be able to book a ride with no specific destination. / Driver shall be able to choose this mode too.
+    * Rider shall be able to book a ride with no specific destination. // specify time
 
 * Requirements / Inputs:
-    <!-- * rider/driver should click on "Free drive" button, rider should contact the available driver and specify the pick up location -->
+   
 
 * Source:
     * Source is rider.
@@ -187,7 +192,7 @@
 * Output:
     * Ride starts
 
----
+--- -->
 
 ### 7. evaluate driver's application:
 
@@ -201,11 +206,13 @@
     * HR & DB ??
 
 * Pre-Condition:
-    * 
+    * lazm ykon fe applications
 
 * Post-Condition:
-    * evaluated application is closed.
+    <!-- * evaluated application is closed. -->
     * if driver is accepted, he should be able to use the application as a driver & his data should be added to database.
+    * email missing data
+    * status is changed from pending into finished
 
 * Output:
     * an email is sent to the desired person states if he is accepted or not, depend on Hr's evaluation.
@@ -229,6 +236,7 @@
 
 * Post-Condition:
     * app can be used.
+    * data is shown
 
 * Output:
     * if driver/rider logg in successfully, home page will be displayed. Otherwise, message that states "email or passcode is incorrect" will be displayed
