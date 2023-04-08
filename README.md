@@ -1,23 +1,23 @@
 # SWE
 ## A. User Requirements:
 
- a.	The System helps the user to book a ride to anywhere & at any time.
-b.	A user (driver) shall be able to confirm / reject request while being on online mode.
-c.	He (driver / rider) can cancel the trip by specifying the reason. 
-d.	User (driver / rider) can report about an issue or lost item during the trip.
-e.	#GIS.
-f.	A user (rider) shall be able to rent a car with his driving liscence.
-g.	Hr can review the drivers applications to accept or decline them.
-h.	He (driver / rider) shall be able to login to the application to start booking a ride.
-i.	User (driver) can choose the driver mode that he desire.
-j.	A user (rider / driver) shall be to register into the application.
-k.	 He can apply for the application to be a driver.
-l.	The System helps the user (rider) to book a ride to anywhere & at any time.
-m.	I (rider) can control my trip.
-n.	The system provides different payment method in the application.
-o.	User ( rider) also can contact with driver or the support.
-p.	A user (rider / driver) shall be to view the history of rides. 
-q.	The user feels free to give a rating about driver or the trip.
+*	The System should enable the user to book a ride to anywhere & at any time.
+* A user (driver) shall be able to confirm / reject request while being on online mode.
+* He (driver / rider) can cancel the trip by specifying the reason. 
+*	User (driver / rider) can report about an issue or lost item during the trip to the help center and support will guide them in the process.
+*	A user (rider) shall be able to rent a car with his driving liscence.
+*	Hr can review the drivers applications to accept or decline them.
+*	He (driver / rider) shall be able to login to the application to start booking a ride.
+*	User (driver) can choose the driver mode that he desire.
+*	A user (rider / driver) shall be to register into the application.
+* A user can apply for the application to be a driver.
+*	I (rider) can edit/update my trip like change the destination or add multiple stops .
+* The system should provide different payment method in the application like cash , wallets , credit cards.
+*	User ( rider) also can contact with driver or the support.
+*	A user (rider / driver) shall be to view the history of rides. 
+*	The user feels free to give a rating about driver or the trip or vise versa .
+* guarantee user safety like adding real-time tracking .
+* the user should be able to see his history of rides .
 
 
 ***
@@ -118,7 +118,7 @@ q.	The user feels free to give a rating about driver or the trip.
 ### 4. match :
     
     * Description / Action:
-        * rider is matched with a driver that is within the area.
+        * rider is matched with a driver that is within the area .
 
     * Requirements / Inputs:
         * pick-up location, driver location, driver information
