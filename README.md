@@ -123,7 +123,13 @@
 ---
 
 ### 4. GIS:
-
+*TO BE ADDED :
+ he must choose between these:
+    1- only one dest 
+    2- multi dest with no wait time 
+    3- with waiting time 
+    
+    
 * Description / Action:
     * driver/rider/customer support shall be able to open the maps integrated in the application and track the car and route.
 
@@ -270,10 +276,10 @@
    
     * action : create an account for the user 
     * inputs : mail , password , phone number and username .
-    * source :  by the user .
-    * pre-condition : check the validation of the user data like checking the format of mail and phone number , the user provided a strong password . 
-    * post-condition : the user data will successfully be added to our database , platform and creadted an account and ready to use the platform .
-    * output : a user account will generated for the user and will be added to the database .
+    * source :  by the rider .
+    * pre-condition : type must be rider . 
+    * post-condition : the user data will successfully be added to our database .
+    * output : rider features will enabled to the user .
 
 ---
 
@@ -281,17 +287,18 @@
     
     * action : enable the user to use the app as a driver .
     * inputs : mail , username, phone number , password and car info .
-    * source : through a form filled by the user.
-    * pre-condition : the user data should be valid like the car license .
-    * post-condition : the user application will be added to the system with status "pending" untill evaluation ends . 
-    * output : the user will receive a message to endicate a sucessfull application .
+    * source : through a form filled by the driver.
+    * pre-condition : the driver data should be valid like the car license .
+    * post-condition : the driver application will be added to the system with status "pending" untill evaluation ends . 
+    * output : the driver will receive a message to endicate a sucessfull application , awaiting screen will appear until the status changes to "accepted".
 
 ---
 
-* book :
+* book a ride :
+    * specify the max time for the multi stops feature 
    - 
-    * action : enable the customer to book a trip defining a pick-up and drop-off points .
-    * inputs : pick-up and drop-off points from the map , the user desired payment method .
+    * action : enable the customer to book a trip defining a source and dest points considering adding multi stops  .
+    * inputs : pick-up and drop-off points from the map .
     * source : form filled by the user .
     * pre-condition: all the parts of this form should be filled and the match process ends sucessfully .
     * post-condition: the app will look for the nearest cars around the customer area . 
@@ -310,7 +317,10 @@
 ---
 
 * payment :
-   
+     * to be added 
+      consider the driver/rider => add / remove card  
+      and support => access the payment method during the trip 
+      
      * action : enabling multiple methods for payment like cash , wallets , credit cards , payment services for the use to choose . 
      * inputs :  choosing from these methods and extra info for credit card info .
      * source: user 
