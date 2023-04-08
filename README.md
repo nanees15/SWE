@@ -33,7 +33,7 @@
     * Driver shall be able to confirm or reject a ride after receiving a request
 
 * Requirements / Inputs:
-    * trip info which includes pick-up, drop-off location, cost, estimated time and type of trip which can be a reserved trip or instant trip.
+    * trip information which includes pick-up, drop-off location, cost, estimated time and type of trip which can be a reserved trip or instant trip.
 
 * Source:
     * Source is System.
@@ -43,7 +43,7 @@
 
 * Post-Condition:
     * if driver confirmed request, system should increment driver's number of rides
-    * if driver rejected request, forward request to another driver.
+    * if driver rejected request, match will be executed again.
 
 * Output:
     * If driver confirmed the request, the ride should start, pickup location, rider info and estimated time should appear and driver should head to it.
@@ -55,18 +55,16 @@
 
 * Description / Action:
     * The driver/rider shall be able to cancel the ride
-    * customer support shall be able to cancel ride in case the app is not responding to driver or rider.
 
 * Requirements / Inputs:
-    * trip info
-    * specify the reason why he/she want to cancel the ride from checkbox and if he/she chose "other", then he/she can write in text field.
-    * support can cancle ride if app is not responding.
+    * trip information
+    * the reason why driver/rider wants to cancel the ride
 
 * Source:
-    * The Source can be DRIVER/rider/customer support
+    * system and driver/rider
 
 * Pre-Condition:
-    * Rider must click on Book a ride, be matched with a driver and the ride start.
+    * Rider must have Booked a ride, be matched with a driver and the ride started.
     * Checking the number of cancels the driver/rider made through the day.
     If it exceeds the maximum allowed number of cancels per day,
       the driver/rider should be informed that if he/she cancels the drive, he/she will pay a fine.
@@ -75,17 +73,20 @@
     * System should increment driver/rider 's number of cancels 
 
 * Output:
-    * |The one who cancelled will be able to specify the reason he/she cancelled|, and then return to the main widget.   ?????
-// msg/ fine
+    * message that confirms the cancellation
 ---
 
 ### 3. Report / Help:
 
 * Description / Action:
-    * Driver/Rider shall be able to report for a situation or for lost/found personal belongings
+    * Driver/Rider shall be able to report for a situation or for lost/found personal belongings.
+    * support can review reports and take the appropriate decision.
 
-* Requirements / Inputs:
-    ##### must specify which user. Driver/rider or support
+* Requirements / Inputs: string halala(---------){}
+    * rider/driver information
+    * type of report which can be issue with account, help with a trip and guide.
+
+    <!-- ##### must specify which user. Driver/rider or support
     ###### In case of Driver/rider:
         * In order to start, driver/rider must specify the topic which can be:
             1. issue with account
@@ -100,26 +101,69 @@
                 * any button would initiate a customer support chat with options,
                     driver/rider should report for what they want and follow the guidline.
             3. guide
-                * include all needed information about the application
+                * include all needed information about the application -->
         
-    ###### In case of Support:
-        * Support can review reports and take the appropriate decision.
+    <!-- ###### In case of Support:
+        * Support can review reports and take the appropriate decision. -->
 * Source:
-    * Source can be DRIVER, RIDER or SUPPORT
+    * Source can be driver/rider and system
 
 * Pre-Condition:
-    <!-- * Open account-page and click on help/report button. -->
+    
 
 * Post-Condition:
     * system should notify customer support that there is a new report
 
 * Output:
-    * if report is under evaluation, a message will be displayed(Thank you for reporting, we will get back to you soon!).
-    * if issue is solved nothing will appear.
+    * a message states that report state is pending till support contacts the reporter.
+
+---
+### 4. matching:
+    
+    * Description / Action:
+        * rider is matched with a driver that is within the area.
+
+    * Requirements / Inputs:
+        * pick-up location, driver location, driver information
+
+    * Source:
+        * system
+
+    * Pre-Condition:
+        * rider must have booked a ride.
+        * driver must have chosen online mode.
+
+    * Post-Condition:
+        * --
+
+    * Output:
+        * rider and driver will be matched and each one will view other's information
 
 ---
 
-### 4. GIS:
+### 4. generate path:
+    
+    * Description / Action:
+        * this functionality generates path
+
+    * Requirements / Inputs:
+        * pick-up location, drop-off location
+
+    * Source:
+        * system
+
+    * Pre-Condition:
+        * 
+
+    * Post-Condition:
+        * 
+
+    * Output:
+        * path is generated and is viewed by rider and driver
+
+---
+
+<!-- ### 4. GIS:
 *TO BE ADDED :
  he must choose between these:
     1- only one dest 
@@ -131,15 +175,14 @@
     * driver/rider/customer support shall be able to open the maps integrated in the application and track the car and route.
 
 * Requirements / Inputs:
-    * rider/driver can view map, search for a location and select places to review.
+    * pick-up and drop-off locations.
     * support can view map and track rides.
 
 * Source:
     * db & user
 
 * Pre-Condition:
-    <!-- * rider must have started the process of booking a ride -->
-    <!-- * rider/driver can view maps while in trip. -->
+    *
 
 * Post-Condition:
     * --
@@ -147,7 +190,7 @@
 * Output:
     * map is displayed
 
----
+--- -->
 
 ### 5. Rentals:
 
@@ -155,15 +198,15 @@
     * Rider shall be able to rent a car for himself to use it and return it back at the agreed time.
 
 * Requirements / Inputs:
-    * In order to start, rider should click on "rent a car" button, choose the type of car he/she wants from the available ones, specify the time of picking up and dropping off and pay a diposit.
+    * renting duration
 
 * Source:
-    * Source is the Rider(user) & database
+    * rider
 
 * Pre-Condition:
     * Rider should have enough money in his wallet/visa in order to make this functionality start.
     * Rider can use this functionality once his rating stars are greater than 3.
-    * lazm y2dm wr2 valid 3shan y2dr y3ml da
+    * rider should have submitted needed papers in order to be able to use this functionality
 
 * Post-Condition:
     * system should track the car & make sure the rider returned the car at the agreed time.
@@ -177,21 +220,20 @@
 ### 7. evaluate driver's application:
 
 * Description / Action:
-    * Hr shall be able to review driver's application, evaluate it and take the appropriate decision.
+    * Hr shall be able to review applicant's application, evaluate it and take the appropriate decision.
 
 * Requirements / Inputs:
-    * hr should be notified that there is a new application, review it and check that that person is qualified to be a driver.
+    * job application
 
 * Source:
-    * HR & DB ??
+    * system
 
 * Pre-Condition:
-    * lazm ykon fe applications
+    * there must be applications
 
 * Post-Condition:
-    <!-- * evaluated application is closed. -->
     * if driver is accepted, he should be able to use the application as a driver & his data should be added to database.
-    * email missing data
+    * if there is missing data in the application, email is sent to the applicant
     * status is changed from pending into finished
 
 * Output:
@@ -205,21 +247,19 @@
     * driver/rider shall be able to log in with his valid email and passcode
 
 * Requirements / Inputs:
-    * driver/rider should enter his email or phone number and passcode.
-    * system must compare this data with the data in database
+    * driver/rider 's phone number or email, password
 
 * Source:
-    * source is USER and DB? (validate with db?)
+    * driver/rider
 
 * Pre-Condition:
     * driver/rider must have an account first
 
 * Post-Condition:
-    * app can be used.
-    * data is shown
+    *
 
 * Output:
-    * if driver/rider logg in successfully, home page will be displayed. Otherwise, message that states "email or passcode is incorrect" will be displayed
+    * if data is valid, driver/rider will be logged in successfully. Otherwise, message states that there is something that is incorrect
 
 ---
 
@@ -229,20 +269,20 @@
     * driver shall be able to choose between online and offline modes. In online mode, driver can receive requests. Otherwise, driver cannot receive requests
 
 * Requirements / Inputs:
-    * 
+    * state of driver
 
 * Source:
-    * Driver
+    * database
 
 * Pre-Condition:
     * driver can't change his mode to offline while he is in ongoing ride.
 
 * Post-Condition:
     * In online mode, receiving requests will be enabled.
+    * In offline mode, nothing.
 
 * Output:
-    * In case of online mode, searching widget will be displayed till he receives a request.
-    * In case of offline mode, nothing changes.
+    * message states that mode is switched
 
 ***
 
@@ -270,6 +310,7 @@
 
 * book a ride :
     * specify the max time for the multi stops feature 
+    // estimated time
    - 
     * action : enable the customer to book a trip defining a source and dest points considering adding multi stops  .
     * inputs : pick-up and drop-off points from the map .
@@ -294,6 +335,7 @@
      * to be added 
       consider the driver/rider => add / remove card  
       and support => access the payment method during the trip 
+      // cost ( 3n tre2 el locations as an input)
       
      * action : enabling multiple methods for payment like cash , wallets , credit cards , payment services for the use to choose . 
      * inputs :  choosing from these methods and extra info for credit card info .
