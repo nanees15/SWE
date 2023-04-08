@@ -29,39 +29,36 @@
 
 ### 1. Confirm / reject request:
 
-// requirements/ input => no ui(info) // source => system 
 * Description / Action:
     * Driver shall be able to confirm or reject a ride after receiving a request
 
 * Requirements / Inputs:
-    * driver have to open the application and wait for a request. // driver mode
-    * select confirm button or reject button
+    * trip info which includes pick-up, drop-off location, cost, estimated time and type of trip which can be a reserved trip or instant trip.
 
 * Source:
-    * Source is Driver.
+    * Source is System.
 
 * Pre-Condition:
-    * Driver must have chosen online mode (can receive requests)
-    //driver must be in match area
+    * Driver must have chosen online mode which enable him to receive requests.
 
 * Post-Condition:
     * if driver confirmed request, system should increment driver's number of rides
-    //if reject forward request to another driver.
+    * if driver rejected request, forward request to another driver.
 
 * Output:
-    * If driver confirmed the request, the ride should start, pickup location should appear and driver should head to it.
-    Otherwise, the system should match driver with another ride. //show other requests
-    // rider info, cost, est
+    * If driver confirmed the request, the ride should start, pickup location, rider info and estimated time should appear and driver should head to it.
+    Otherwise, system displays other requests
 
 ---
 
 ### 2. Cancel ride:
 
 * Description / Action:
-    * The driver, rider and customer support shall be able to cancel the ride at any time.
+    * The driver/rider shall be able to cancel the ride
+    * customer support shall be able to cancel ride in case the app is not responding to driver or rider.
 
 * Requirements / Inputs:
-    * Rider/Driver should click on "cancel ride" button // input
+    * trip info
     * specify the reason why he/she want to cancel the ride from checkbox and if he/she chose "other", then he/she can write in text field.
     * support can cancle ride if app is not responding.
 
@@ -177,29 +174,6 @@
 
 ---
 
-<!-- ### 6. Free drive:
-
-// fe hagat hna 
-* Description / Action:
-    * Rider shall be able to book a ride with no specific destination. // specify time
-
-* Requirements / Inputs:
-   
-
-* Source:
-    * Source is rider.
-
-* Pre-Condition:
-    * Rider can use this functionality once his rating stars are greater than 3.
-
-* Post-Condition:
-    * 
-
-* Output:
-    * Ride starts
-
---- -->
-
 ### 7. evaluate driver's application:
 
 * Description / Action:
@@ -252,10 +226,10 @@
 ### 9. driver mode:
 
 * Description / Action:
-    * driver shall be able to choose his mode
+    * driver shall be able to choose between online and offline modes. In online mode, driver can receive requests. Otherwise, driver cannot receive requests
 
 * Requirements / Inputs:
-    * driver choose between online and offline modes. In online mode, driver can receive requests. Otherwise, driver cannot receive requests
+    * 
 
 * Source:
     * Driver
