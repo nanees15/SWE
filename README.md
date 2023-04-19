@@ -223,7 +223,7 @@
     * the location of car .
 
 * Source:
-    * map 
+    * system 
 
 * Pre-Condition:
     * the trip must start first .
